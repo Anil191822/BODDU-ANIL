@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Anil Kumar Yadav - Personal Portfolio</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background:#f4f4f4;
+            color:#333;
+            line-height:1.6;
+        }
+
+        header{
+            background:#111827;
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
+
+        header h1{
+            font-size:40px;
+        }
+
+        header p{
+            margin-top:10px;
+            font-size:18px;
+        }
+
+        nav{
+            background:#1f2937;
+            padding:10px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:0 15px;
+            font-size:18px;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            color:#38bdf8;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+            padding:20px;
+        }
+
+        section{
+            background:white;
+            margin:20px 0;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2{
+            margin-bottom:15px;
+            color:#111827;
+            border-bottom:2px solid #38bdf8;
+            display:inline-block;
+            padding-bottom:5px;
+        }
+
+        ul{
+            margin-left:20px;
+        }
+
+        .resume-btn{
+            display:inline-block;
+            margin-top:15px;
+            padding:12px 20px;
+            background:#38bdf8;
+            color:white;
+            text-decoration:none;
+            border-radius:5px;
+            transition:0.3s;
+        }
+
+        .resume-btn:hover{
+            background:#0284c7;
+        }
+
+        .skills{
+            display:flex;
+            flex-wrap:wrap;
+            gap:10px;
+        }
+
+        .skill{
+            background:#111827;
+            color:white;
+            padding:10px 15px;
+            border-radius:20px;
+        }
+
+        footer{
+            background:#111827;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:20px;
+        }
+
+        .dark-mode{
+            background:#111827;
+            color:white;
+        }
+
+        .toggle-btn{
+            position:fixed;
+            top:20px;
+            right:20px;
+            padding:10px 15px;
+            border:none;
+            background:#38bdf8;
+            color:white;
+            cursor:pointer;
+            border-radius:5px;
+        }
+
+        .profile-img{
+            width:180px;
+            height:180px;
+            border-radius:50%;
+            object-fit:cover;
+            margin-top:20px;
+            border:5px solid white;
+        }
+
+        @media(max-width:768px){
+            header h1{
+                font-size:28px;
+            }
+
+            nav a{
+                display:block;
+                margin:10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="toggle-btn" onclick="toggleMode()">Dark Mode</button>
+
+    <header>
+        <h1>Anil Kumar Yadav</h1>
+        <p>Personal & Professional Portfolio Website</p>
+
+        <!-- Replace image URL with your own -->
+        <img src="C:\Users\pasha\OneDrive\Desktop\carrer guidance project\backend\anil passphoto.pdf" alt="profile profile-img">
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#personal">Personal Details</a>
+        <a href="#professional">Professional</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- ABOUT -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm <b>Anil Kumar Yadav</b>. 
+                I am passionate about technology, government jobs, web development, and personal growth.
+                This website contains my complete personal and professional profile.
+            </p>
+        </section>
+
+        <!-- PERSONAL DETAILS -->
+        <section id="personal">
+            <h2>Personal Details</h2>
+
+            <p><b>Full Name:</b>ANIL BODDU</p>
+            <p><b>Date of Birth:</b> 01/07/2004</p>
+            <p><b>Gender:</b> Male</p>
+            <p><b>Nationality:</b> Indian</p>
+            <p><b>Residence:</b> Telangana, India</p>
+            <p><b>Languages Known:</b> Telugu, English, Hindi</p>
+            <p><b>Hobbies:</b> Technology, Watching Animes, Learning Skills</p>
+        </section>
+
+        <!-- PROFESSIONAL -->
+        <section id="professional">
+            <h2>Professional Details</h2>
+
+            <p><b>Career Goal:</b> To build a successful professional career in technology and government sectors.</p>
+
+            <p><b>Experience:</b></p>
+            <ul>
+                <li>Beginner Web Developer</li>
+                <li>Interested in Customer Support & IT Roles</li>
+                <li>Learning HTML, CSS, JavaScript</li>
+            </ul>
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education">
+            <h2>Education</h2>
+
+            <ul>
+                <li>10th Standard - ZPHS Challagarige</li>
+                <li>Intermediate (10+2) - GOVT.junior Collage Chityala</li>
+            </ul>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills">
+            <h2>Skills</h2>
+
+            <div class="skills">
+                <div class="skill">HTML CSS JavaScript</div>
+                <div class="skill">Adopting Skills to improve regularly</div>
+                <div class="skill">Business Developement</div>
+                <div class="skill">Communication</div>
+                <div class="skill">Recruitment Skills</div>
+                <div class="skill">Problem Solving</div>
+            </div>
+        </section>
+
+        <!-- RESUME -->
+        <section id="resume">
+            <h2>Resume</h2>
+
+            <p>
+                Click below to download my resume.
+            </p>
+
+            <!-- Replace with your resume PDF -->
+            <a href="" class="r"C:\Users\pasha\Downloads\Boddu_Anil_Resume.pdf"esume-btn" download>
+                Download Resume
+            </a>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <h2>Contact Information</h2>
+
+            <p><b>Email:</b> aayadav919821@gmail.com</p>
+            <p><b>Phone:</b> +91 9505136798</p>
+            <p><b>Location:</b> Telangana, India</p>
+
+            <br>
+
+            <form onsubmit="sendMessage(event)">
+                <input type="text" id="name" placeholder="Your Name" required
+                style="width:100%; padding:12px; margin-bottom:10px;">
+
+                <input type="email" id="email" placeholder="Your Email" required
+                style="width:100%; padding:12px; margin-bottom:10px;">
+
+                <textarea id="message" placeholder="Your Message" required
+                style="width:100%; padding:12px; height:120px;"></textarea>
+
+                <button type="submit"
+                style="margin-top:10px; padding:12px 20px; background:#38bdf8; color:white; border:none; border-radius:5px;">
+                    Send Message
+                </button>
+            </form>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Anil Kumar Yadav | Personal Portfolio Website</p>
+    </footer>
+
+    <script>
+
+        // DARK MODE
+        function toggleMode(){
+            document.body.classList.toggle("dark-mode");
+        }
+
+        // CONTACT MESSAGE
+        function sendMessage(event){
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+
+            alert("Thank you " + name + "! Your message has been received.");
+
+            document.querySelector("form").reset();
+        }
+
+    </script>
+
+</body>
+</html>
