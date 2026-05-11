@@ -1,466 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anil Kumar Yadav | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boddu Anil | Portfolio</title>
 
-    <style>
+<style>
 
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family: Arial, sans-serif;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
 
-        body{
-            background:#f4f4f4;
-            color:#333;
-            line-height:1.6;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        /* HEADER */
+body{
+    background:#f1f5f9;
+    color:#111827;
+    line-height:1.6;
+}
 
-        header{
-            background:#111827;
-            color:white;
-            text-align:center;
-            padding:40px 20px;
-        }
+/* DARK MODE */
 
-        header h1{
-            font-size:42px;
-            margin-bottom:10px;
-        }
+.dark-mode{
+    background:#020617;
+    color:white;
+}
 
-        header p{
-            font-size:18px;
-            margin-bottom:20px;
-        }
+.dark-mode section{
+    background:#1e293b;
+    color:white;
+}
 
-        .profile-img{
-            width:180px;
-            height:180px;
-            border-radius:50%;
-            object-fit:cover;
-            border:5px solid white;
-            box-shadow:0 0 15px rgba(0,0,0,0.3);
-        }
+.dark-mode nav{
+    background:#0f172a;
+}
 
-        /* DARK MODE BUTTON */
+/* BUTTON */
 
-        .toggle-btn{
-            position:fixed;
-            top:20px;
-            right:20px;
-            padding:10px 16px;
-            border:none;
-            border-radius:6px;
-            background:#38bdf8;
-            color:white;
-            cursor:pointer;
-            font-weight:bold;
-        }
+.toggle-btn{
+    position:fixed;
+    top:20px;
+    right:20px;
+    background:#38bdf8;
+    color:white;
+    border:none;
+    padding:12px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    z-index:1000;
+    transition:0.3s;
+}
 
-        .toggle-btn:hover{
-            background:#0284c7;
-        }
+.toggle-btn:hover{
+    transform:scale(1.05);
+}
 
-        /* NAVBAR */
+/* HEADER */
 
-        nav{
-            background:#1f2937;
-            text-align:center;
-            padding:15px;
-            position:sticky;
-            top:0;
-        }
+header{
+    background:linear-gradient(to right,#0f172a,#1e293b);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
 
-        nav a{
-            color:white;
-            text-decoration:none;
-            margin:0 15px;
-            font-size:17px;
-            transition:0.3s;
-        }
+header h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
 
-        nav a:hover{
-            color:#38bdf8;
-        }
+header p{
+    font-size:20px;
+    margin-bottom:25px;
+}
 
-        /* MAIN CONTAINER */
+/* PROFILE IMAGE */
 
-        .container{
-            width:90%;
-            max-width:1100px;
-            margin:auto;
-            padding:20px 0;
-        }
+.profile-container{
+    display:flex;
+    justify-content:center;
+}
 
-        /* SECTIONS */
+.profile-img{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid white;
+    cursor:pointer;
+    transition:0.4s;
+    box-shadow:0 0 25px rgba(0,0,0,0.4);
+}
 
-        section{
-            background:white;
-            padding:25px;
-            margin:25px 0;
-            border-radius:12px;
-            box-shadow:0 0 10px rgba(0,0,0,0.1);
-        }
+.profile-img:hover{
+    transform:scale(1.08);
+}
 
-        h2{
-            color:#111827;
-            margin-bottom:15px;
-            border-bottom:3px solid #38bdf8;
-            display:inline-block;
-            padding-bottom:5px;
-        }
+/* NAVBAR */
 
-        ul{
-            margin-left:20px;
-            margin-top:10px;
-        }
+nav{
+    background:#1e293b;
+    padding:15px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:999;
+}
 
-        ul li{
-            margin-bottom:8px;
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+    transition:0.3s;
+}
 
-        /* SKILLS */
+nav a:hover{
+    color:#38bdf8;
+}
 
-        .skills{
-            display:flex;
-            flex-wrap:wrap;
-            gap:12px;
-            margin-top:15px;
-        }
+/* CONTAINER */
 
-        .skill{
-            background:#111827;
-            color:white;
-            padding:10px 18px;
-            border-radius:20px;
-            font-size:14px;
-        }
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding:20px 0;
+}
 
-        /* BUTTON */
+/* SECTIONS */
 
-        .resume-btn{
-            display:inline-block;
-            margin-top:15px;
-            background:#38bdf8;
-            color:white;
-            text-decoration:none;
-            padding:12px 20px;
-            border-radius:6px;
-            transition:0.3s;
-        }
+section{
+    background:white;
+    margin:25px 0;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 0 12px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
 
-        .resume-btn:hover{
-            background:#0284c7;
-        }
+section:hover{
+    transform:translateY(-4px);
+}
 
-        /* FORM */
+h2{
+    margin-bottom:20px;
+    display:inline-block;
+    border-bottom:4px solid #38bdf8;
+    padding-bottom:5px;
+}
 
-        form input,
-        form textarea{
-            width:100%;
-            padding:12px;
-            margin-bottom:12px;
-            border:1px solid #ccc;
-            border-radius:6px;
-            font-size:15px;
-        }
+/* SKILLS */
 
-        form button{
-            padding:12px 20px;
-            background:#38bdf8;
-            color:white;
-            border:none;
-            border-radius:6px;
-            cursor:pointer;
-            font-size:16px;
-        }
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
 
-        form button:hover{
-            background:#0284c7;
-        }
+.skill{
+    background:#0f172a;
+    color:white;
+    padding:10px 18px;
+    border-radius:25px;
+    transition:0.3s;
+}
 
-        /* FOOTER */
+.skill:hover{
+    background:#38bdf8;
+    transform:scale(1.05);
+}
 
-        footer{
-            background:#111827;
-            color:white;
-            text-align:center;
-            padding:20px;
-            margin-top:30px;
-        }
+/* PROJECT */
 
-        /* DARK MODE */
+.project-box{
+    background:#e2e8f0;
+    padding:18px;
+    border-radius:12px;
+    margin-top:10px;
+}
 
-        .dark-mode{
-            background:#0f172a;
-            color:white;
-        }
+.dark-mode .project-box{
+    background:#334155;
+}
 
-        .dark-mode section{
-            background:#1e293b;
-            color:white;
-        }
+/* BUTTON */
 
-        .dark-mode h2{
-            color:#38bdf8;
-        }
+.resume-btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#38bdf8;
+    color:white;
+    padding:14px 22px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
 
-        /* MOBILE */
+.resume-btn:hover{
+    background:#0284c7;
+    transform:scale(1.05);
+}
 
-        @media(max-width:768px){
+/* FOOTER */
 
-            header h1{
-                font-size:30px;
-            }
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
 
-            nav a{
-                display:block;
-                margin:10px 0;
-            }
+/* MOBILE */
 
-            .profile-img{
-                width:140px;
-                height:140px;
-            }
+@media(max-width:768px){
 
-        }
+header h1{
+    font-size:34px;
+}
 
-    </style>
+.profile-img{
+    width:180px;
+    height:180px;
+}
 
+nav a{
+    display:block;
+    margin:10px 0;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-    <!-- DARK MODE BUTTON -->
+<!-- DARK MODE BUTTON -->
 
-    <button class="toggle-btn" onclick="toggleMode()">
-        Dark Mode
-    </button>
+<button class="toggle-btn"
+onclick="document.body.classList.toggle('dark-mode')">
 
-    <!-- HEADER -->
+Dark Mode
 
-    <header>
+</button>
 
-        <h1>Anil Kumar Yadav</h1>
+<!-- HEADER -->
 
-        <p>Personal & Professional Portfolio Website</p>
+<header>
 
-        <!-- PROFILE IMAGE -->
-        <!-- Put profile.jpg in same folder as index.html -->
+<h1>BODDU ANIL</h1>
 
-        <img src="c:\Users\pasha\OneDrive\Pictures\Saved Pictures\anilll.jpg" class="profile-img">
+<p>
+Undergraduate | Multitasking Skills | Dedicated Towards Success
+</p>
 
-    </header>
+<div class="profile-container">
 
-    <!-- NAVIGATION -->
+<a href="anilll.png" target="_blank">
 
-    <nav>
+<img src="C:\Users\pasha\OneDrive\Pictures\Saved Pictures\anilll.png"
+alt="Boddu Anil"
+class="profile-img">
 
-        <a href="#about">About</a>
-        <a href="#personal">Personal</a>
-        <a href="#professional">Professional</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
+</a>
 
-    </nav>
+</div>
 
-    <!-- MAIN CONTENT -->
+</header>
 
-    <div class="container">
+<!-- NAVBAR -->
 
-        <!-- ABOUT -->
+<nav>
 
-        <section id="about">
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#education">Education</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
 
-            <h2>About Me</h2>
+</nav>
 
-            <p>
-                Hello! I'm <b>Anil Kumar Yadav</b>.
-                I am passionate about technology, web development,
-                customer support, and career growth.
-                This portfolio website showcases my personal and professional details.
-            </p>
+<!-- MAIN CONTENT -->
 
-        </section>
+<div class="container">
 
-        <!-- PERSONAL DETAILS -->
+<!-- ABOUT -->
 
-        <section id="personal">
+<section id="about">
 
-            <h2>Personal Details</h2>
+<h2>About Me</h2>
 
-            <p><b>Full Name:</b> Anil Boddu</p>
-            <p><b>Date of Birth:</b> 01/07/2004</p>
-            <p><b>Gender:</b> Male</p>
-            <p><b>Nationality:</b> Indian</p>
-            <p><b>Location:</b> Telangana, India</p>
-            <p><b>Languages Known:</b> Telugu, English, Hindi</p>
-            <p><b>Hobbies:</b> Technology, Anime, Learning New Skills</p>
+<p>
 
-        </section>
+Passion Towards Success.
 
-        <!-- PROFESSIONAL -->
+</p>
 
-        <section id="professional">
+</section>
 
-            <h2>Professional Details</h2>
+<!-- SKILLS -->
 
-            <p>
-                <b>Career Goal:</b>
-                To build a successful career in the IT and technology sector.
-            </p>
+<section id="skills">
 
-            <ul>
-                <li>Beginner Web Developer</li>
-                <li>Interested in Customer Support & IT Roles</li>
-                <li>Learning HTML, CSS, JavaScript</li>
-                <li>Interested in Recruitment & Communication Roles</li>
-            </ul>
+<h2>Skills</h2>
 
-        </section>
+<div class="skills">
 
-        <!-- EDUCATION -->
+<div class="skill">Problem Solving</div>
+<div class="skill">Communication</div>
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Computer Knowledge</div>
+<div class="skill">MS Word</div>
+<div class="skill">Leading and managment</div>
+<div class="skill">Guiding</div>
+<div class="skill">Better Understanding</div>
+<div class="skill">decision making</div>
 
-        <section id="education">
+</div>
 
-            <h2>Education</h2>
+</section>
 
-            <ul>
-                <li>10th Standard - ZPHS Challagarige</li>
-                <li>Intermediate (10+2) - Govt. Junior College, Chityala</li>
-            </ul>
+<!-- EDUCATION -->
 
-        </section>
+<section id="education">
 
-        <!-- SKILLS -->
+<h2>Education</h2>
 
-        <section id="skills">
+<p>
 
-            <h2>Skills</h2>
+<strong>Intermediate (10+2)</strong><br>
+Govt Junior College Chityal - 506356<br>
+Completed in 2021
 
-            <div class="skills">
+</p>
 
-                <div class="skill">HTML</div>
-                <div class="skill">CSS</div>
-                <div class="skill">JavaScript</div>
-                <div class="skill">Communication</div>
-                <div class="skill">Problem Solving</div>
-                <div class="skill">Business Development</div>
-                <div class="skill">Recruitment Skills</div>
-                <div class="skill">Quick Learner</div>
+<br>
 
-            </div>
+<p>
 
-        </section>
+<strong>10th Standard</strong><br>
+ZPHS Challagarige - 506356<br>
+Completed in 2019
 
-        <!-- RESUME -->
+</p>
 
-        <section id="resume">
+</section>
 
-            <h2>Resume</h2>
+<!-- PROJECTS -->
 
-            <p>Click below to download my resume.</p>
+<section id="projects">
 
-            <!-- Put resume.pdf in same folder -->
+<h2>Projects</h2>
 
-            <a href="./resume.pdf" download class="resume-btn">
-                Download Resume
-            </a>
+<div class="project-box">
 
-        </section>
+<h3>Creating a Website</h3>
 
-        <!-- CONTACT -->
+<p>
 
-        <section id="contact">
+This is my first project where I designed and developed a personal portfolio website using HTML, CSS, and JavaScript.
 
-            <h2>Contact Information</h2>
+</p>
 
-            <p><b>Email:</b> aayadav919821@gmail.com</p>
-            <p><b>Phone:</b> +91 9505136798</p>
-            <p><b>Location:</b> Telangana, India</p>
+</div>
 
-            <br>
+</section>
 
-            <form onsubmit="sendMessage(event)">
+<!-- CONTACT -->
 
-                <input
-                    type="text"
-                    id="name"
-                    placeholder="Your Name"
-                    required
-                >
+<section id="contact">
 
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="Your Email"
-                    required
-                >
+<h2>Contact</h2>
 
-                <textarea
-                    id="message"
-                    placeholder="Your Message"
-                    rows="5"
-                    required
-                ></textarea>
+<p><strong>Email:</strong> aayadav919821@gmail.com</p>
 
-                <button type="submit">
-                    Send Message
-                </button>
+<p><strong>Phone:</strong> 9505136798</p>
 
-            </form>
+<!-- RESUME BUTTON -->
 
-        </section>
+<a href="C:\Users\pasha\Downloads\Boddu_Anil_Resume.pdf"
+download
+class="resume-btn">
 
-    </div>
+Download Resume
 
-    <!-- FOOTER -->
+</a>
 
-    <footer>
+</section>
 
-        <p>
-            © 2026 Anil Kumar Yadav | Personal Portfolio Website
-        </p>
+</div>
 
-    </footer>
+<!-- FOOTER -->
 
-    <!-- JAVASCRIPT -->
+<footer>
 
-    <script>
+<p>
 
-        // DARK MODE
+© 2026 BODDU ANIL | Personal Portfolio Website
 
-        function toggleMode() {
+</p>
 
-            document.body.classList.toggle("dark-mode");
-
-        }
-
-        // CONTACT FORM
-
-        function sendMessage(event) {
-
-            event.preventDefault();
-
-            let name = document.getElementById("name").value;
-
-            alert("Thank you " + name + "! Your message has been received.");
-
-            document.querySelector("form").reset();
-
-        }
-
-    </script>
+</footer>
 
 </body>
 </html>
-
-
